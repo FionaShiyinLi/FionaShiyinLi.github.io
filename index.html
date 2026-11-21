@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shiyin Li, Biostatistics</title>
+<meta name="description" content="Shiyin Li is a PhD candidate in biostatistics at the University of Arizona. She works on Bayesian meta-analysis, evidence synthesis, and language models for systematic reviews.">
+<meta name="author" content="Shiyin Li">
+<meta property="og:title" content="Shiyin Li, Biostatistics">
+<meta property="og:description" content="PhD candidate in biostatistics at the University of Arizona. Bayesian meta-analysis, evidence synthesis, and language models for systematic reviews.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f5f5b'/%3E%3Ctext x='32' y='47' font-family='Times New Roman, Times, serif' font-style='italic' font-size='48' text-anchor='middle' fill='%23ffffff'%3E%CF%84%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shiyin Li",
+  "jobTitle": "PhD Candidate in Biostatistics",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Arizona" },
+  "email": "mailto:shiyinli@arizona.edu",
+  "sameAs": ["https://orcid.org/0009-0002-1680-281X", "https://github.com/FionaShiyinLi"]
+}
+</script>
+<style>
+/* Layout idea: a single left-aligned reading column with section names set in the
+   margin, like marginal heads in a paper. One large italic tau is the only ornament:
+   it is the quantity the dissertation is about. Set in STIX Two, the typeface made
+   for scientific publishing. */
+:root {
+  --paper: #ffffff;
+  --wash: #eef4f2;        /* tinted band behind the opening */
+  --ink: #1a2b2a;
+  --muted: #566b69;
+  --rule: #d5dfdc;
+  --accent: #1f5f5b;      /* pine green, used for links and the tau */
+  --tau: #1f5f5b;
+  --font-text: "STIX Two Text", "STIXGeneral", "Times New Roman", Times, serif;
+  --step--1: 0.9rem;
+  --step-0: 1.125rem;
+  --step-1: 1.35rem;
+  --step-3: clamp(2.5rem, 1.6rem + 4.2vw, 4.25rem);
+  --gutter: clamp(1.1rem, 4vw, 3rem);
+  --measure: 41rem;
+  --margin-col: 9.5rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1716;
+    --wash: #152120;
+    --ink: #e3ece9;
+    --muted: #9db0ac;
+    --rule: #26342f;
+    --accent: #8fd2c3;
+    --tau: #5fae9e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1716;
+  --wash: #152120;
+  --ink: #e3ece9;
+  --muted: #9db0ac;
+  --rule: #26342f;
+  --accent: #8fd2c3;
+  --tau: #5fae9e;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+}
+p { margin: 0; }
+p + p { margin-top: 0.85em; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+.skip { position: absolute; left: -999px; top: 0; background: var(--paper); padding: 0.5rem 0.9rem; }
+.skip:focus { left: var(--gutter); top: 0.5rem; z-index: 2; }
+
+.wrap { max-width: calc(var(--margin-col) + 2.5rem + var(--measure) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ---------- opening ---------- */
+.opening { background: var(--wash); border-bottom: 1px solid var(--rule); }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; justify-content: flex-end; padding: 1.1rem 0 0; font-size: var(--step--1); }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); text-decoration: underline; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem 3rem; padding: 2.75rem 0 3.25rem; align-items: end; }
+.intro h1 { font-size: var(--step-3); line-height: 1.05; letter-spacing: -0.012em; }
+.role { margin-top: 0.7rem; font-size: var(--step-1); line-height: 1.35; color: var(--muted); font-style: italic; }
+.intro-text { margin-top: 1.6rem; max-width: 35rem; }
+.links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.6rem; margin-top: 1.7rem; }
+.links .addr { color: var(--muted); }
+.tau { display: grid; grid-template-columns: auto minmax(0, 15rem); gap: 1.25rem; align-items: end; }
+.tau-glyph { font-style: italic; font-size: clamp(7rem, 4rem + 15vw, 15rem); line-height: 0.62; color: var(--tau); padding-bottom: 0.08em; user-select: none; }
+.tau p { font-size: var(--step--1); line-height: 1.5; color: var(--muted); }
+.tau p b { font-weight: 600; font-style: italic; color: var(--ink); }
+@media (min-width: 56rem) {
+  .intro { grid-template-columns: minmax(0, 1fr) auto; }
+  .tau { grid-template-columns: minmax(0, 13.5rem); justify-items: start; gap: 1.6rem; }
+}
+
+/* ---------- sections with marginal heads ---------- */
+.section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.9rem 2.5rem; padding: 2.6rem 0; border-top: 1px solid var(--rule); }
+.section:first-of-type { border-top: 0; }
+.section > h2 { font-size: var(--step-1); font-style: italic; color: var(--accent); line-height: 1.3; }
+.section > .body { max-width: var(--measure); min-width: 0; }
+@media (min-width: 56rem) {
+  .section { grid-template-columns: var(--margin-col) minmax(0, var(--measure)); }
+  .section > h2 { font-size: var(--step-0); padding-top: 0.12rem; }
+}
+
+.topic + .topic { margin-top: 1.9rem; }
+.topic h3 { font-size: var(--step-1); line-height: 1.3; margin-bottom: 0.4rem; }
+.related { margin-top: 0.55rem; font-size: var(--step--1); color: var(--muted); }
+
+.group + .group { margin-top: 2.1rem; }
+.group > h3 { font-size: var(--step--1); color: var(--muted); font-style: italic; margin-bottom: 0.8rem; }
+.pubs > li + li { margin-top: 1.25rem; }
+.pubs .title { font-weight: 600; line-height: 1.38; }
+.pubs .authors, .pubs .venue { font-size: var(--step--1); line-height: 1.5; color: var(--muted); }
+.pubs .authors b { font-weight: 600; color: var(--ink); }
+.pubs .venue { margin-top: 0.1rem; }
+.pubs .venue a { margin-left: 0.55rem; white-space: nowrap; }
+.note { margin-top: 1.5rem; font-size: var(--step--1); color: var(--muted); }
+
+.rows > li { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 1.5rem; padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+.rows > li:first-child { padding-top: 0; }
+.rows > li:last-child { border-bottom: 0; padding-bottom: 0; }
+.rows .when { color: var(--muted); font-size: var(--step--1); font-variant-numeric: lining-nums tabular-nums; }
+.rows .where { color: var(--muted); }
+@media (min-width: 34rem) {
+  .rows > li { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; }
+  .rows .when { text-align: right; }
+}
+.plain > li + li { margin-top: 1rem; }
+.plain .desc { color: var(--muted); font-size: var(--step--1); line-height: 1.5; margin-top: 0.1rem; }
+address { font-style: normal; color: var(--muted); margin-top: 0.7rem; font-size: var(--step--1); line-height: 1.55; }
+
+footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size: var(--step--1); color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#research">Skip to research</a>
+
+<header class="opening">
+  <div class="wrap">
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#code">Code</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="intro">
+      <div>
+        <h1>Shiyin Li</h1>
+        <p class="role">PhD candidate in biostatistics, University of Arizona</p>
+        <div class="intro-text">
+          <p>I work on evidence synthesis: how to combine results from separate studies, and how to report the uncertainty of the combined answer when only a few studies exist. My advisor is Lifeng Lin.</p>
+          <p>My dissertation builds empirical prior distributions for between-study heterogeneity in Bayesian meta-analysis from two decades of Cochrane reviews. I also test what language models can do for systematic reviews, and I analyze trials and meta-analyses with clinical collaborators.</p>
+        </div>
+        <ul class="links">
+          <li><a href="mailto:shiyinli@arizona.edu">shiyinli@arizona.edu</a></li>
+          <li><a href="cv.pdf">Curriculum vitae (PDF)</a></li>
+          <li><a href="https://github.com/FionaShiyinLi">GitHub</a></li>
+          <li><a href="https://orcid.org/0009-0002-1680-281X">ORCID</a></li>
+        </ul>
+      </div>
+      <div class="tau">
+        <div class="tau-glyph" aria-hidden="true">&tau;</div>
+        <p><b>&tau;</b> is the between-study standard deviation: how much the true effect differs from one study to the next. Estimating it from a handful of studies is the problem my dissertation works on.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="research" aria-labelledby="h-research">
+    <h2 id="h-research">Research</h2>
+    <div class="body">
+      <div class="topic">
+        <h3>Bayesian meta-analysis with few studies</h3>
+        <p>Most meta-analyses contain only a few studies, too few to estimate &tau; well from the data alone. I develop empirical priors for &tau;, separately for odds ratios, risk ratios, risk differences, and standardized mean differences, using Cochrane reviews published from 2003 to 2025. Each prior is judged by how well it predicts study results it has not seen, and by simulation.</p>
+        <p class="related">Dissertation research, in progress.</p>
+      </div>
+      <div class="topic">
+        <h3>How Cochrane reviews are produced and structured</h3>
+        <p>I build databases of Cochrane reviews and use them to describe the evidence base itself. In a study of review lifecycles, 71.9% of 8,137 protocols went on to become full reviews, after a median of 25.7 months.</p>
+        <p class="related">Related: <a href="https://doi.org/10.1002/cesm.70043">Lifecycles of Cochrane systematic reviews (2003&ndash;2024)</a></p>
+      </div>
+      <div class="topic">
+        <h3>Language models in evidence synthesis</h3>
+        <p>Systematic reviews depend on repeated expert judgment, which makes them a demanding test for language models. I have compared fine-tuned biomedical language models with a prompted general-purpose model for classifying outcome types, used a language model to flag overlooked trial reports for human reassessment in a cancer-screening evidence base, and measured how figure format affects the reconstruction of Kaplan&ndash;Meier data.</p>
+        <p class="related">Related: <a href="https://doi.org/10.64898/2026.08.29.26361733">cancer-screening evidence audit</a>, <a href="https://doi.org/10.64898/2026.11.03.26367147">Kaplan&ndash;Meier figure format</a>, outcome classification (in press)</p>
+      </div>
+      <div class="topic">
+        <h3>Clinical collaborations</h3>
+        <p>I work with clinical researchers on randomized trials and systematic reviews, using mixed-effects models, mediation analysis, and meta-analysis. Published work includes a meta-analysis of customized titanium mesh for alveolar bone regeneration.</p>
+        <p class="related">Related: <a href="https://doi.org/10.1186/s40729-026-00732-z">Patient-specific customized titanium mesh</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="publications" aria-labelledby="h-publications">
+    <h2 id="h-publications">Publications</h2>
+    <div class="body">
+      <div class="group">
+        <h3>Peer-reviewed articles</h3>
+        <ul class="pubs">
+          <li>
+            <div class="title">Biomedical language models outperform prompted GPT-5.2 for automated outcome classification in systematic reviews</div>
+            <div class="authors"><b>Li S</b>, Han H, Al Amer FM, Xiao M, Wu C, Lin L</div>
+            <div class="venue"><i>PLOS Digital Health</i>, in press <a href="https://github.com/FionaShiyinLi/Classification">Code</a></div>
+          </li>
+          <li>
+            <div class="title">Patient-specific customized titanium mesh for alveolar bone regeneration: a systematic review and meta-analysis</div>
+            <div class="authors">Alsabeeha NHM, Lambert F, Ivanovski S, <b>Li S</b>, Lin L, Andrade CAS, Atieh MA</div>
+            <div class="venue"><i>International Journal of Implant Dentistry</i>, 2026; 12(1): 61 <a href="https://doi.org/10.1186/s40729-026-00732-z">Article</a></div>
+          </li>
+          <li>
+            <div class="title">Lifecycles of Cochrane systematic reviews (2003&ndash;2024): a bibliographic study</div>
+            <div class="authors"><b>Li S</b>, Wu C, Zhang Z, Xiao M, Murad MH, Lin L</div>
+            <div class="venue"><i>Cochrane Evidence Synthesis and Methods</i>, 2025; 3(5): e70043 <a href="https://doi.org/10.1002/cesm.70043">Article</a></div>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Preprints</h3>
+        <ul class="pubs">
+          <li>
+            <div class="title">Figure format and the accuracy of AI-assisted reconstruction of Kaplan&ndash;Meier survival data</div>
+            <div class="authors"><b>Li S</b>, Xing X, Te B, Han H, Ji H, Yu Y, Siegel L, Lin L</div>
+            <div class="venue"><i>medRxiv</i>, 2026 <a href="https://doi.org/10.64898/2026.11.03.26367147">Preprint</a> <a href="https://github.com/FionaShiyinLi/km-curve-reconstruction-study">Code</a></div>
+          </li>
+          <li>
+            <div class="title">LLM-assisted evidence audit of late-stage cancer incidence as a screening trial endpoint</div>
+            <div class="authors"><b>Li S</b>*, Zhang W*, Xing X, Shen Z, Wang Y, Chen Z, Leal Neto OB, Yu Y, Wu C, Lin L (*co-first authors)</div>
+            <div class="venue"><i>medRxiv</i>, 2026 <a href="https://doi.org/10.64898/2026.08.29.26361733">Preprint</a></div>
+          </li>
+          <li>
+            <div class="title">Bias, benefit, or both? Surveying perceptions of AI in healthcare</div>
+            <div class="authors">Adhikari E, <b>Li S</b>, Lopez A, Lin L</div>
+            <div class="venue"><i>SSRN</i>, 2025 <a href="https://doi.org/10.2139/ssrn.5903303">Preprint</a></div>
+          </li>
+        </ul>
+      </div>
+      <p class="note">Four more manuscripts are under review. They are listed in my <a href="cv.pdf">CV</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="code" aria-labelledby="h-code">
+    <h2 id="h-code">Code</h2>
+    <div class="body">
+      <ul class="plain">
+        <li>
+          <a href="https://github.com/FionaShiyinLi/Classification">Classification</a>
+          <div class="desc">Code and aggregate results for the outcome-classification paper: training, comparison and ablation scripts, leakage audits, and a reproducibility guide.</div>
+        </li>
+        <li>
+          <a href="https://github.com/FionaShiyinLi/km-curve-reconstruction-study">km-curve-reconstruction-study</a>
+          <div class="desc">Analysis code and frozen study data for the Kaplan&ndash;Meier figure-format study.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="teaching" aria-labelledby="h-teaching">
+    <h2 id="h-teaching">Teaching and service</h2>
+    <div class="body">
+      <ul class="rows">
+        <li><span>SAS laboratory instructor, Biostatistics for Research <span class="where">(University of Arizona)</span></span><span class="when">Spring 2025</span></li>
+        <li><span>Teaching assistant, Introduction to Biostatistics and Healthcare Data Science <span class="where">(University of Arizona)</span></span><span class="when">2023&ndash;2025</span></li>
+        <li><span>Teaching assistant, Applied Regression <span class="where">(Columbia University)</span></span><span class="when">Fall 2022</span></li>
+        <li><span>Teaching assistant, calculus for the biological sciences <span class="where">(University of Minnesota)</span></span><span class="when">Fall 2020</span></li>
+      </ul>
+      <p class="note">I review manuscripts for <i>Journal of Clinical Epidemiology</i>, <i>BMC Medical Research Methodology</i>, and <i>Prevention Science</i>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="education" aria-labelledby="h-education">
+    <h2 id="h-education">Education</h2>
+    <div class="body">
+      <ul class="rows">
+        <li><span>PhD in Biostatistics, minor in Information <span class="where">(University of Arizona)</span></span><span class="when">Expected December 2027</span></li>
+        <li><span>MS in Biostatistics <span class="where">(Columbia University)</span></span><span class="when">2023</span></li>
+        <li><span>BS in Statistical Science, with a second major in Mathematics <span class="where">(University of Minnesota Twin Cities)</span></span><span class="when">2021</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <div class="body">
+      <p><a href="mailto:shiyinli@arizona.edu">shiyinli@arizona.edu</a></p>
+      <address>
+        Department of Epidemiology and Biostatistics<br>
+        Mel and Enid Zuckerman College of Public Health, University of Arizona<br>
+        1295 N. Martin Ave., Tucson, AZ 85724
+      </address>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Last updated November 2026.</div>
+</footer>
+</body>
+</html>
