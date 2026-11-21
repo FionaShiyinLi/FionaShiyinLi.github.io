@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shiyin Li, Biostatistics</title>
-<meta name="description" content="Shiyin Li is a PhD candidate in biostatistics at the University of Arizona. She works on Bayesian meta-analysis, evidence synthesis, and language models for systematic reviews.">
+<title>Shiyin (Fiona) Li, Biostatistics</title>
+<meta name="description" content="Shiyin (Fiona) Li is a PhD candidate in biostatistics at the University of Arizona. She works on Bayesian meta-analysis, evidence synthesis, and language models for systematic reviews.">
 <meta name="author" content="Shiyin Li">
-<meta property="og:title" content="Shiyin Li, Biostatistics">
+<meta property="og:title" content="Shiyin (Fiona) Li, Biostatistics">
 <meta property="og:description" content="PhD candidate in biostatistics at the University of Arizona. Bayesian meta-analysis, evidence synthesis, and language models for systematic reviews.">
 <meta property="og:type" content="profile">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f5f5b'/%3E%3Ctext x='32' y='47' font-family='Times New Roman, Times, serif' font-style='italic' font-size='48' text-anchor='middle' fill='%23ffffff'%3E%CF%84%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f5f5b'/%3E%3Ctext x='32' y='43' font-family='Times New Roman, Times, serif' font-size='30' text-anchor='middle' fill='%23ffffff'%3ESL%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Shiyin Li",
+  "alternateName": "Fiona Li",
   "jobTitle": "PhD Candidate in Biostatistics",
   "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Arizona" },
   "email": "mailto:shiyinli@arizona.edu",
@@ -24,17 +25,15 @@
 </script>
 <style>
 /* Layout idea: a single left-aligned reading column with section names set in the
-   margin, like marginal heads in a paper. One large italic tau is the only ornament:
-   it is the quantity the dissertation is about. Set in STIX Two, the typeface made
-   for scientific publishing. */
+   margin, like marginal heads in a paper. No ornament; the type does the work.
+   Set in STIX Two, the typeface made for scientific publishing. */
 :root {
   --paper: #ffffff;
   --wash: #eef4f2;        /* tinted band behind the opening */
   --ink: #1a2b2a;
   --muted: #566b69;
   --rule: #d5dfdc;
-  --accent: #1f5f5b;      /* pine green, used for links and the tau */
-  --tau: #1f5f5b;
+  --accent: #1f5f5b;      /* pine green, used for links and section names */
   --font-text: "STIX Two Text", "STIXGeneral", "Times New Roman", Times, serif;
   --step--1: 0.9rem;
   --step-0: 1.125rem;
@@ -53,7 +52,6 @@
     --muted: #9db0ac;
     --rule: #26342f;
     --accent: #8fd2c3;
-    --tau: #5fae9e;
     color-scheme: dark;
   }
 }
@@ -64,7 +62,6 @@
   --muted: #9db0ac;
   --rule: #26342f;
   --accent: #8fd2c3;
-  --tau: #5fae9e;
   color-scheme: dark;
 }
 
@@ -99,20 +96,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; justify-content: flex-end; padding: 1.1rem 0 0; font-size: var(--step--1); }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover { color: var(--accent); text-decoration: underline; }
-.intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem 3rem; padding: 2.75rem 0 3.25rem; align-items: end; }
+.intro { padding: 2.75rem 0 3.25rem; }
 .intro h1 { font-size: var(--step-3); line-height: 1.05; letter-spacing: -0.012em; }
 .role { margin-top: 0.7rem; font-size: var(--step-1); line-height: 1.35; color: var(--muted); font-style: italic; }
 .intro-text { margin-top: 1.6rem; max-width: 35rem; }
 .links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.6rem; margin-top: 1.7rem; }
 .links .addr { color: var(--muted); }
-.tau { display: grid; grid-template-columns: auto minmax(0, 15rem); gap: 1.25rem; align-items: end; }
-.tau-glyph { font-style: italic; font-size: clamp(7rem, 4rem + 15vw, 15rem); line-height: 0.62; color: var(--tau); padding-bottom: 0.08em; user-select: none; }
-.tau p { font-size: var(--step--1); line-height: 1.5; color: var(--muted); }
-.tau p b { font-weight: 600; font-style: italic; color: var(--ink); }
-@media (min-width: 56rem) {
-  .intro { grid-template-columns: minmax(0, 1fr) auto; }
-  .tau { grid-template-columns: minmax(0, 13.5rem); justify-items: start; gap: 1.6rem; }
-}
 
 /* ---------- sections with marginal heads ---------- */
 .section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.9rem 2.5rem; padding: 2.6rem 0; border-top: 1px solid var(--rule); }
@@ -168,7 +157,7 @@ footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size:
     </nav>
     <div class="intro">
       <div>
-        <h1>Shiyin Li</h1>
+        <h1>Shiyin (Fiona) Li</h1>
         <p class="role">PhD candidate in biostatistics, University of Arizona</p>
         <div class="intro-text">
           <p>I work on evidence synthesis: how to combine results from separate studies, and how to report the uncertainty of the combined answer when only a few studies exist. My advisor is Lifeng Lin.</p>
@@ -181,10 +170,6 @@ footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size:
           <li><a href="https://orcid.org/0009-0002-1680-281X">ORCID</a></li>
         </ul>
       </div>
-      <div class="tau">
-        <div class="tau-glyph" aria-hidden="true">&tau;</div>
-        <p><b>&tau;</b> is the between-study standard deviation: how much the true effect differs from one study to the next. Estimating it from a handful of studies is the problem my dissertation works on.</p>
-      </div>
     </div>
   </div>
 </header>
@@ -196,7 +181,7 @@ footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size:
     <div class="body">
       <div class="topic">
         <h3>Bayesian meta-analysis with few studies</h3>
-        <p>Most meta-analyses contain only a few studies, too few to estimate &tau; well from the data alone. I develop empirical priors for &tau;, separately for odds ratios, risk ratios, risk differences, and standardized mean differences, using Cochrane reviews published from 2003 to 2025. Each prior is judged by how well it predicts study results it has not seen, and by simulation.</p>
+        <p>Most meta-analyses contain only a few studies, too few to estimate between-study heterogeneity well from the data alone. I develop empirical priors for it, separately for odds ratios, risk ratios, risk differences, and standardized mean differences, using Cochrane reviews published from 2003 to 2025. Each prior is judged by how well it predicts study results it has not seen, and by simulation.</p>
         <p class="related">Dissertation research, in progress.</p>
       </div>
       <div class="topic">
@@ -287,7 +272,7 @@ footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size:
         <li><span>SAS laboratory instructor, Biostatistics for Research <span class="where">(University of Arizona)</span></span><span class="when">Spring 2025</span></li>
         <li><span>Teaching assistant, Introduction to Biostatistics and Healthcare Data Science <span class="where">(University of Arizona)</span></span><span class="when">2023&ndash;2025</span></li>
         <li><span>Teaching assistant, Applied Regression <span class="where">(Columbia University)</span></span><span class="when">Fall 2022</span></li>
-        <li><span>Teaching assistant, calculus for the biological sciences <span class="where">(University of Minnesota)</span></span><span class="when">Fall 2020</span></li>
+        <li><span>Teaching assistant, calculus for the biological sciences <span class="where">(University of Minnesota Twin Cities)</span></span><span class="when">Fall 2020</span></li>
       </ul>
       <p class="note">I review manuscripts for <i>Journal of Clinical Epidemiology</i>, <i>BMC Medical Research Methodology</i>, and <i>Prevention Science</i>.</p>
     </div>
@@ -299,7 +284,7 @@ footer { border-top: 1px solid var(--rule); padding: 1.4rem 0 2.5rem; font-size:
       <ul class="rows">
         <li><span>PhD in Biostatistics, minor in Information <span class="where">(University of Arizona)</span></span><span class="when">Expected December 2027</span></li>
         <li><span>MS in Biostatistics <span class="where">(Columbia University)</span></span><span class="when">2023</span></li>
-        <li><span>BS in Statistical Science, with a second major in Mathematics <span class="where">(University of Minnesota Twin Cities)</span></span><span class="when">2021</span></li>
+        <li><span>BS in Statistical Science and BA in Mathematics <span class="where">(University of Minnesota Twin Cities)</span></span><span class="when">2021</span></li>
       </ul>
     </div>
   </section>
